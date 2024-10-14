@@ -1,0 +1,22 @@
+# Ignore build directory
+/build/
+
+# Ignore tests directory
+/tests/
+
+# Ignore object files
+*.o
+
+# Ignore binary files
+*.exe
+*.out
+*.dll
+*.so
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore IDE-specific files (optional)
+*.idea/
+*.vscode/
