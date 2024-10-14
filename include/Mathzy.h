@@ -92,6 +92,83 @@ namespace Mathzy {
      * @throws std::invalid_argument if value is negative.
      */
     double sqrt(double value);
+
+    /**
+     * @brief Calculates the n-th Fibonacci number.
+     * 
+     * The Fibonacci sequence is a series of numbers in which each number is the sum of the 
+     * two preceding ones, usually starting with 0 and 1. The sequence is defined as follows:
+     * 
+     * - F(0) = 0, F(1) = 1
+     * - F(n) = F(n - 1) + F(n - 2) for n >= 2
+     * 
+     * This function computes the Fibonacci number iteratively to avoid stack overflow 
+     * issues that can occur with recursive implementations for larger values of n.
+     * 
+     * @param n The index of the Fibonacci sequence (must be a non-negative integer).
+     * 
+     * @return The n-th Fibonacci number as an unsigned long long.
+     * 
+     * @throws std::invalid_argument if n is negative.
+     */
+    unsigned long long fibonacci(int n);
+
+    /**
+     * @brief Determines whether a given integer is a prime number.
+     * 
+     * A prime number is a natural number greater than 1 that cannot be formed by 
+     * multiplying two smaller natural numbers. This function checks if the provided 
+     * integer is prime by testing divisibility from 2 to the square root of n.
+     * 
+     * @param n The integer to check for primality (must be a positive integer).
+     * 
+     * @return True if n is a prime number, false otherwise.
+     * 
+     * @throws std::invalid_argument if n is less than 2.
+     */
+    bool isPrime(int n);
+
+    /**
+     * @brief Calculates the number of combinations of n items taken r at a time.
+     * 
+     * The number of combinations is defined as the number of ways to choose r items 
+     * from n items without regard to the order of selection. It is given by the formula:
+     * 
+     * - C(n, r) = n! / (r! * (n - r)!)
+     * 
+     * This function first checks the validity of the inputs and then computes the 
+     * combinations using the factorial function.
+     * 
+     * @param n The total number of items (must be non-negative).
+     * @param r The number of items to choose (must be in the range [0, n]).
+     * 
+     * @return The number of combinations of n items taken r at a time as an 
+     *         unsigned long long.
+     * 
+     * @throws std::invalid_argument if r is negative or greater than n.
+     */
+    unsigned long long combination(int n, int r);
+
+    /**
+     * @brief Calculates the number of permutations of n items taken r at a time.
+     * 
+     * The number of permutations is defined as the number of ways to arrange r items 
+     * from a set of n items. It is given by the formula:
+     * 
+     * - P(n, r) = n! / (n - r)!
+     * 
+     * This function first checks the validity of the inputs and then computes the 
+     * permutations using the factorial function.
+     * 
+     * @param n The total number of items (must be non-negative).
+     * @param r The number of items to arrange (must be in the range [0, n]).
+     * 
+     * @return The number of permutations of n items taken r at a time as an 
+     *         unsigned long long.
+     * 
+     * @throws std::invalid_argument if r is negative or greater than n.
+     */
+    unsigned long long permutation(int n, int r);
 }
 
 #endif // MATHZY_H
