@@ -1,4 +1,4 @@
-#include "Mathzy.h"
+#include "../include/Mathzy.h"
 #include <cmath>
 
 namespace Mathzy {
